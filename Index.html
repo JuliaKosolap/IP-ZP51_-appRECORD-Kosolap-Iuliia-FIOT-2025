@@ -1,0 +1,145 @@
+
+  <header>
+    <h1>Звіт з лабораторної роботи №1</h1>
+    <h2>з дисципліни «Проєктування WEB-застосувань»</h2>
+
+    <p><b>Виконала:</b> студентка групи ZP-51<br>
+    <b>ПІБ:</b> Косолап Юлія</p>
+    <img src="images/avatar.jpg" alt="Фото студента" width="150">
+  </header>
+
+  <hr>
+
+  <section id="info">
+    <h3>Тема ЛР №1.1</h3>
+    <p>Створення структури головної сторінки власного WEB-застосунку.</p>
+
+    <h3>Мета ЛР №1.1</h3>
+    <p>Навчитись створювати HTML-документ із семантичною розміткою, таблицями, списками та зображеннями.</p>
+
+    <h3>Місце розташування</h3>
+    <ul>
+      <li><a href="https://github.com/JuliaKosolap/IP-ZP51_appWEB-Kosolap-Iuliia-FIOT-2025">Репозиторій власного WEB-застосунку</a></li>
+      <li><a href="https://juliakosolap.github.io/IP-ZP51_appWEB-Kosolap-Iuliia-FIOT-2025/">Жива сторінка власного WEB-застосунку</a></li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section id="description">
+    <h3>Опис предметного середовища</h3>
+    <p><b>Green Mom Sweets</b> — це сайт магазину корисних солодощів ручної роботи. 
+      Мета — створити онлайн-вітрину для замовлення батончиків, трюфелів і шоколаду з натуральних інгредієнтів.
+    </p>
+  </section>
+
+  <hr>
+
+  <section id="structure">
+    <h3>Структура WEB-застосунку</h3>
+    <p>HTML-документ складається з таких основних частин:</p>
+    <ul>
+      <li><code>&lt;header&gt;</code> — логотип і навігаційне меню</li>
+      <li><code>&lt;main&gt;</code> — головний контент сторінки</li>
+      <li><code>&lt;section&gt;</code> — окремі блоки з товарами, інформацією, контактами</li>
+      <li><code>&lt;footer&gt;</code> — підвал із джерелами</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section id="table">
+    <h3>HTML-код таблиці</h3>
+    <p>Приклад таблиці з цінами:</p>
+    <pre><code>
+&lt;table class="price-table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Назва&lt;/th&gt;
+      &lt;th&gt;Опис&lt;/th&gt;
+      &lt;th&gt;Вага / набір&lt;/th&gt;
+      &lt;th&gt;Ціна&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Набір батончиків міні&lt;/td&gt;
+      &lt;td&gt;3 штуки з різними смаками&lt;/td&gt;
+      &lt;td&gt;150 г&lt;/td&gt;
+      &lt;td&gt;₴250&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;td&gt;Набір батончиків максі&lt;/td&gt;
+      &lt;td&gt;6 батончиків з фініками та горіхами&lt;/td&gt;
+      &lt;td&gt;300 г&lt;/td&gt;
+      &lt;td&gt;₴350&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;td&gt;Асорті трюфелів&lt;/td&gt;
+      &lt;td&gt;Кокос, какао, мигдаль&lt;/td&gt;
+      &lt;td&gt;200 г&lt;/td&gt;
+      &lt;td&gt;₴270&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;td&gt;Крафтовий шоколад&lt;/td&gt;
+      &lt;td&gt;Темний 75% або молочний&lt;/td&gt;
+      &lt;td&gt;100 г&lt;/td&gt;
+      &lt;td&gt;₴140&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+    <p>Використані теги: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>.</p>
+  </section>
+
+  <hr>
+
+  <section id="images">
+    <h3>HTML-код зображення</h3>
+    <pre><code>
+    &lt;img rc="images/logo.png" width="120" height="100"&gt;
+    </code></pre>
+    <p>Тег <code>&lt;img&gt;</code> використовується для вставки зображень. 
+    Основні атрибути - <code>src</code> (шлях до файлу) і <code>width, hight</code> - розміри картинки.</p>
+  </section>
+
+  <hr>
+
+  <section id="lists">
+    <h3>HTML-код списку</h3>
+  <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#hero"&gt;Головна&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#about"&gt;Про нас&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#services"&gt;Асортимент&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#delivery"&gt;Доставка&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#contacts"&gt;Контакти&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+    <p>Теги: <code>&lt;ul&gt;</code> — список, <code>&lt;li&gt;</code> — пункт списку.</p>
+  </section>
+
+  <hr>
+
+  <section id="conclusion">
+    <h3>Висновки</h3>
+    <p>У ході виконання лабораторної роботи я навчилась створювати базову структуру HTML-документа, 
+    використовувати таблиці, списки, зображення та публікувати сайт через GitHub Pages.</p>
+  </section>
+
+  <hr>
+
+  <footer>
+    <p><b>Список використаних джерел:</b></p>
+    <ol>
+      <li><a href="https://w3schoolsua.github.io/html/index.html">HTML підручник (w3schools українською)</a></li>
+      <li><a href="https://www.w3schools.com/html/">HTML Tutorial (англійською)</a></li>
+    </ol>
+  </footer>
+
+</body>
+</html>
