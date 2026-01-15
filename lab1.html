@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="site-header">
+    <div class="container">
+        <h1>Звіт з лабораторної роботи №1</h1>
+        <p class="subtitle">Теги та атрибути HTML-документа. Структурна розмітка. Git/GitHub.</p>
+
+        <nav class="top-nav">
+            <a class="back-link" href="index.html">← На головну</a>
+            <a class="nav-link" href="lab2.html">Перейти до ЛР2 →</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section id="info" class="card">
+        <h2>Тема ЛР №1</h2>
+        <p>
+            ТЕГИ ТА АТРИБУТИ HTML-ДОКУМЕНТА. СТРУКТУРНА РОЗМІТКА.
+            GIT. GITHUB. РОБОТА З РЕПОЗИТОРІЯМИ. ОПИС ЛОГІКИ ВЛАСНОГО WEB-ЗАСТОСУНКУ.
+        </p>
+
+        <h3>Мета</h3>
+        <p>
+            Придбати практичні навички роботи з GitHub, репозиторіями, HTML-документом, таблицями, зображеннями,
+            посиланнями, списками, формами. Створити шаблон звітного HTML-документа для відображення результатів
+            роботи всіх лабораторних робіт.
+        </p>
+
+        <h3>Місце розташування</h3>
+        <ul>
+            <li>
+                <a href="https://github.com/JuliaKosolap/IP-ZP51_appWEB-Kosolap-Iuliia-FIOT-2025">
+                    Репозиторій власного WEB-застосунку
+                </a>
+            </li>
+            <li>
+                <a href="https://juliakosolap.github.io/IP-ZP51_appWEB-Kosolap-Iuliia-FIOT-2025/">
+                    Жива сторінка власного WEB-застосунку
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/JuliaKosolap/IP-ZP51_-appRECORD-Kosolap-Iuliia-FIOT-2025">
+                    Репозиторій звіту
+                </a>
+            </li>
+            <li>
+                <a href="https://juliakosolap.github.io/IP-ZP51_-appRECORD-Kosolap-Iuliia-FIOT-2025/">
+                    Жива сторінка звіту
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="description" class="card">
+        <h2>Опис предметного середовища</h2>
+        <p>
+            <b>Green Mom Sweets</b> — це сайт магазину корисних солодощів ручної роботи.
+            Мета — створити онлайн-вітрину для замовлення батончиків, трюфелів і шоколаду
+            з натуральних інгредієнтів.
+        </p>
+    </section>
+
+    <section id="structure" class="card">
+        <h2>Структура WEB-застосунку</h2>
+        <p>HTML-документ складається з таких основних частин:</p>
+        <ul>
+            <li><code>&lt;header&gt;</code> — логотип і навігаційне меню</li>
+            <li><code>&lt;main&gt;</code> — головний контент сторінки</li>
+            <li><code>&lt;section&gt;</code> — окремі блоки з товарами, інформацією, контактами</li>
+            <li><code>&lt;footer&gt;</code> — підвал із джерелами</li>
+        </ul>
+    </section>
+
+    <section id="table" class="card">
+        <h2>HTML-код таблиці</h2>
+        <p>Приклад таблиці з цінами:</p>
+
+        <pre><code>&lt;table class="price-table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Назва&lt;/th&gt;
+      &lt;th&gt;Опис&lt;/th&gt;
+      &lt;th&gt;Вага / набір&lt;/th&gt;
+      &lt;th&gt;Ціна&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Набір батончиків міні&lt;/td&gt;
+      &lt;td&gt;3 штуки з різними смаками&lt;/td&gt;
+      &lt;td&gt;150 г&lt;/td&gt;
+      &lt;td&gt;₴250&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+        <p>Використані теги: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>.
+        </p>
+    </section>
+
+    <section id="images" class="card">
+        <h2>HTML-код зображення</h2>
+
+        <pre><code>&lt;img src="images/logo.png" alt="Логотип" width="120" height="100"&gt;</code></pre>
+
+        <p>
+            Тег <code>&lt;img&gt;</code> використовується для вставки зображень.
+            Основні атрибути:
+            <code>src</code> (шлях до файлу),
+            <code>alt</code> (опис),
+            <code>width</code> і <code>height</code> (розміри).
+        </p>
+    </section>
+
+    <section id="lists" class="card">
+        <h2>HTML-код списку</h2>
+
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#hero"&gt;Головна&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#about"&gt;Про нас&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#services"&gt;Асортимент&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#delivery"&gt;Доставка&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#contacts"&gt;Контакти&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <p>Теги: <code>&lt;ul&gt;</code> — список, <code>&lt;li&gt;</code> — пункт списку.</p>
+    </section>
+
+    <section id="conclusion" class="card">
+        <h2>Висновки</h2>
+        <p>
+            У ході виконання лабораторної роботи я навчилась створювати базову структуру HTML-документа,
+            використовувати таблиці, списки, зображення та публікувати сайт через GitHub Pages.
+        </p>
+    </section>
+
+    <section id="questions" class="card">
+        <h2>Контрольні питання</h2>
+
+        <h3>1. Яка структура HTML-документа?</h3>
+        <p>
+            HTML-документ складається з <code>&lt;!DOCTYPE html&gt;</code>, кореневого елемента <code>&lt;html&gt;</code>,
+            блоку <code>&lt;head&gt;</code> з метаданими та блоку <code>&lt;body&gt;</code>, у якому розміщується видимий вміст.
+        </p>
+
+        <h3>2. Дати визначення тега.</h3>
+        <p>
+            Тег — це елемент HTML-мови, який позначає структуру або функцію частини документа.
+            Більшість тегів мають відкривальний і закривальний варіанти та можуть містити атрибути.
+        </p>
+
+        <h3>3. Які теги використовуються при роботі з таблицями?</h3>
+        <p>
+            <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>,
+            а також <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>.
+        </p>
+
+        <h3>4. Які теги використовуються при роботі із зображеннями?</h3>
+        <p>
+            <code>&lt;img&gt;</code> — порожній тег, атрибути: <code>src</code>, <code>alt</code>, <code>width</code>, <code>height</code>.
+        </p>
+
+        <h3>5. Які теги використовуються при роботі зі списками?</h3>
+        <p>
+            <code>&lt;ul&gt;</code> (маркований), <code>&lt;ol&gt;</code> (нумерований), <code>&lt;li&gt;</code> (пункт списку).
+        </p>
+
+        <h3>6. Перерахувати засоби опису таблиць в HTML.</h3>
+        <p>
+            <code>&lt;caption&gt;</code>, атрибути <code>border</code>, <code>cellpadding</code>, <code>cellspacing</code>,
+            <code>colspan</code>, <code>rowspan</code>; також <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>.
+        </p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p><b>Список використаних джерел:</b></p>
+        <ol>
+            <li><a href="https://w3schoolsua.github.io/html/index.html">HTML підручник (w3schools українською)</a></li>
+            <li><a href="https://www.w3schools.com/html/">HTML Tutorial (англійською)</a></li>
+        </ol>
+
+        <p class="note">
+            <a href="index.html">← На головну</a>
+        </p>
+    </div>
+</footer>
+</body>
+
+</html>

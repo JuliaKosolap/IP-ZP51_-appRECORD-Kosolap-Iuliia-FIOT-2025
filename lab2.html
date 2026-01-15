@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна робота №2 — Звіт</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="site-header">
+    <div class="container">
+        <h1>Звіт з лабораторної роботи №2</h1>
+        <p class="subtitle">
+            Стильове оформлення елементів у HTML-документах. CSS. Селектори.
+        </p>
+
+        <nav class="top-nav">
+            <a class="back-link" href="index.html">← На головну</a>
+            <a class="nav-link" href="lab1.html">← Перейти до ЛР1</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section id="info" class="card">
+        <h2>Тема ЛР №2</h2>
+        <p>
+            СТИЛЬОВЕ ОФОРМЛЕННЯ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.
+            Каскадні таблиці стилів. Селектори тегу, класу, ідентифікатора. Інші селектори.
+        </p>
+
+        <h3>Мета</h3>
+        <p>
+            Набути практичних навичок використання CSS, підключення зовнішнього файлу стилів, застосування
+            різних типів селекторів (тег, клас, id, інші), а також оформлення тексту, таблиць і списків.
+        </p>
+
+        <h3>Файли</h3>
+        <ul>
+            <li><code>lab2.html</code> — сторінка звіту ЛР2</li>
+            <li><code>style.css</code> — зовнішній файл стилів звіту</li>
+        </ul>
+    </section>
+
+    <!-- 1. Селектори тегу -->
+    <section id="tag-selectors" class="card">
+        <h2>1. Селектори тегу (tag selectors)</h2>
+        <p>
+            Селектор тегу застосовується до <b>усіх елементів певного HTML-тега</b>.
+            Наприклад: <code>body</code>, <code>h1</code>, <code>p</code>, <code>a</code>.
+        </p>
+
+        <h3>Фрагмент CSS</h3>
+        <pre><code>/* Селектор тегу */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a:hover {
+  text-decoration: underline;
+}</code></pre>
+
+        <div class="demo-box">
+            <h4>Демонстрація</h4>
+            <p>Цей текст — тег <code>&lt;p&gt;</code>, стилізується правилами для тегів.</p>
+        </div>
+    </section>
+
+    <!-- 2. Селектори класу -->
+    <section id="class-selectors" class="card">
+        <h2>2. Селектори класу (class selectors)</h2>
+        <p>
+            Селектор класу визначається через <code>.class</code> і може застосовуватись до багатьох елементів.
+        </p>
+
+        <h3>Фрагмент HTML</h3>
+        <pre><code>&lt;p class="highlight"&gt;
+  Приклад тексту зі стилем класу
+&lt;/p&gt;</code></pre>
+
+        <h3>Фрагмент CSS</h3>
+        <pre><code>/* Селектор класу */
+.highlight {
+  background: #fff4a3;
+  font-weight: 700;
+}</code></pre>
+
+        <p class="highlight">Цей текст оформлено стилем класу <code>.highlight</code>.</p>
+    </section>
+
+    <!-- 3. Селектори id -->
+    <section id="id-selectors" class="card">
+        <h2>3. Селектори ідентифікатора (id selectors)</h2>
+        <p>
+            Ідентифікатор — унікальний. Стилі задаються через <code>#id</code>.
+        </p>
+
+        <h3>Фрагмент HTML</h3>
+        <pre><code>&lt;div id="selector-id-demo"&gt;...&lt;/div&gt;</code></pre>
+
+        <h3>Фрагмент CSS</h3>
+        <pre><code>/* Селектор id */
+#selector-id-demo {
+  border-color: #2f8f2f;
+  background: #effff0;
+}</code></pre>
+
+        <div class="demo-box" id="selector-id-demo">
+            <h4>ID-селектор</h4>
+            <p>Цей блок стилізовано через <code>#selector-id-demo</code>.</p>
+        </div>
+    </section>
+
+    <!-- 4. Інші селектори -->
+    <section id="other-selectors" class="card">
+        <h2>4. Інші селектори</h2>
+
+        <p>Для демонстрації використано:</p>
+        <ul>
+            <li><b>Універсальний</b> — <code>*</code></li>
+            <li><b>Вкладений</b> — <code>.demo-box p</code></li>
+            <li><b>Дочірній</b> — <code>.demo-box &gt; h4</code></li>
+            <li><b>Сусідній</b> — <code>h4 + p</code></li>
+            <li><b>Атрибутний</b> — <code>a[href^="mailto:"]</code></li>
+        </ul>
+
+        <h3>Фрагмент CSS</h3>
+        <pre><code>/* Універсальний */
+* { box-sizing: border-box; }
+
+/* Вкладений */
+.demo-box p { margin: 0; }
+
+/* Дочірній */
+.demo-box &gt; h4 { text-transform: uppercase; }
+
+/* Сусідній */
+h4 + p { margin-top: 4px; }
+
+/* Атрибутний */
+a[href^="mailto:"] { font-weight: 700; }</code></pre>
+
+        <div class="demo-box">
+            <h4>Демонстрація інших селекторів</h4>
+            <p>Цей текст оформлено вкладеним селектором <code>.demo-box p</code>.</p>
+            <p class="note">
+                Email-посилання:
+                <a href="mailto:hello@greenmomsweet.ua">hello@greenmomsweet.ua</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- 5. Оформлення таблиць, списків, тексту -->
+    <section id="tables-lists" class="card">
+        <h2>5. Оформлення тексту, таблиць і списків</h2>
+
+        <h3>Приклад оформлення таблиці</h3>
+        <pre><code>table { border-collapse: collapse; }
+th, td { border: 1px solid #ccc; padding: 10px; }
+th { background: #f0f0f0; }</code></pre>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Назва</th>
+                <th>Опис</th>
+                <th>Вага</th>
+                <th>Ціна</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Набір батончиків міні</td>
+                <td>3 штуки з різними смаками</td>
+                <td>150 г</td>
+                <td>₴250</td>
+            </tr>
+            <tr>
+                <td>Крафтовий шоколад</td>
+                <td>Темний 75% або молочний</td>
+                <td>100 г</td>
+                <td>₴140</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>Приклад списку</h3>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;Пункт 1&lt;/li&gt;
+  &lt;li&gt;Пункт 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+        </ul>
+    </section>
+
+    <section id="conclusion" class="card">
+        <h2>Висновки</h2>
+        <p>
+            У ході виконання лабораторної роботи №2 я навчилась підключати зовнішні таблиці стилів,
+            використовувати CSS-селектори (тегу, класу, id), а також інші селектори
+            (універсальний, вкладений, дочірній, сусідній, атрибутний). Стилі застосовано для тексту,
+            таблиці та списків.
+        </p>
+    </section>
+
+    <section id="questions" class="card">
+        <h2>Контрольні питання</h2>
+
+        <h3>1. Для чого використовуються каскадні таблиці стилів?</h3>
+        <p>
+            CSS відокремлює оформлення від структури HTML-документа та дозволяє керувати зовнішнім виглядом елементів.
+        </p>
+
+        <h3>2. Які методи визначення стилів у HTML-документі ви знаєте?</h3>
+        <p>
+            Inline-стилі (у атрибуті <code>style</code>), внутрішні стилі (всередині <code>&lt;style&gt;</code>),
+            зовнішній файл стилів (через <code>&lt;link&gt;</code>).
+        </p>
+
+        <h3>3. У чому різниця між каскадуванням і спадкуванням?</h3>
+        <p>
+            Каскадування визначає пріоритет стилів при конфліктах, спадкування — передавання частини стилів
+            від батьківських елементів до дочірніх.
+        </p>
+
+        <h3>4. Як оформлюються селектори тегу і класу?</h3>
+        <p>
+            Селектор тегу — назва тега (<code>p { }</code>), селектор класу — через крапку (<code>.item { }</code>).
+        </p>
+
+        <h3>5. Для чого використовується ідентифікатор?</h3>
+        <p>
+            Для унікальної ідентифікації елемента, створення якорів у навігації, та стилізації через <code>#id</code>.
+        </p>
+
+        <h3>6. Навести приклади оформлення текстових елементів.</h3>
+        <p>
+            Властивості: <code>color</code>, <code>font-size</code>, <code>font-weight</code>,
+            <code>font-family</code>, <code>line-height</code>, <code>text-align</code>, <code>text-transform</code>.
+        </p>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p><b>Список використаних джерел:</b></p>
+        <ol>
+            <li><a href="https://w3schoolsua.github.io/css/index.html">CSS підручник (w3schools українською)</a></li>
+            <li><a href="https://www.w3schools.com/css/">CSS Tutorial (англійською)</a></li>
+        </ol>
+
+        <p class="note">
+            <a href="index.html">← На головну</a>
+        </p>
+    </div>
+</footer>
+</body>
+
+</html>
