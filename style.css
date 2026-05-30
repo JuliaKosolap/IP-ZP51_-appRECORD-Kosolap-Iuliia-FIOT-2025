@@ -211,3 +211,23 @@ td {
 th {
   background: #f0f0f0;
 }
+.run-btn {
+    background: #2f8f2f;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.run-btn:hover {
+    background: #256f25;
+}
+
+.result-image {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+}
