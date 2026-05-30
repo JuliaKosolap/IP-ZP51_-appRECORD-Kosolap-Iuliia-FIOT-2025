@@ -55,8 +55,9 @@ hr {
 .site-header {
   background: linear-gradient(135deg, #0b65c2, #4a90e2);
   color: white;
-  padding: 40px 0;
+  padding: 20px 0;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 1200px;
 }
 
 .site-footer {
@@ -91,9 +92,10 @@ hr {
 
 /* ========== NAVIGATION ========== */
 .menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
 }
 
 .menu-link {
