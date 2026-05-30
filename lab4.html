@@ -7,71 +7,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лабораторна робота №4 — Звіт</title>
 
-<link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 
 </head>
 
 <body>
 
-<header class="site-header">
-    <div class="container">
+    <header class="site-header">
+        <div class="container">
 
-    <h1>Звіт з лабораторної роботи №4</h1>
+            <h1>Звіт з лабораторної роботи №4</h1>
 
-    <p class="subtitle">
-        Основи JavaScript у HTML-документі. Керування порядком обчислень.
-        Масиви. Методи масивів. Функції.
-    </p>
+            <p class="subtitle">
+                Основи JavaScript у HTML-документі. Керування порядком обчислень.
+                Масиви. Методи масивів. Функції.
+            </p>
 
-    <nav class="top-nav">
-        <a class="back-link" href="index.html">← На головну</a>
-        <a class="nav-link" href="lab2.html">← Перейти до ЛР2</a>
-    </nav>
+            <nav class="top-nav">
+                <a class="back-link" href="index.html">← На головну</a>
+                <a class="nav-link" href="lab2.html">← Перейти до ЛР2</a>
+            </nav>
 
-</div>
+        </div>
 
-</header>
+    </header>
 
-<main class="container">
+    <main class="container">
 
-<section id="info" class="card">
+        <section id="info" class="card">
 
-    <h2>Тема ЛР №4</h2>
+            <h2>Тема ЛР №4</h2>
 
-    <p>
-        Основи JavaScript у HTML-документі. Керування порядком обчислень.
-        Масиви. Методи масивів. Функції.
-    </p>
+            <p>
+                Основи JavaScript у HTML-документі. Керування порядком обчислень.
+                Масиви. Методи масивів. Функції.
+            </p>
 
-    <h3>Мета</h3>
+            <h3>Мета</h3>
 
-    <p>
-        Придбати практичні навички роботи з конструкціями мови JavaScript,
-        масивами та функціями у JS-сценаріях. Реалізація програм засобами
-        мови JavaScript.
-    </p>
+            <p>
+                Придбати практичні навички роботи з конструкціями мови JavaScript,
+                масивами та функціями у JS-сценаріях. Реалізація програм засобами
+                мови JavaScript.
+            </p>
 
-</section>
+        </section>
 
-<!-- ===================== TASK 1 ===================== -->
+        <!-- ===================== TASK 1 ===================== -->
 
-<section id="task1" class="card">
+        <section id="task1" class="card">
 
-    <h2>Завдання №1</h2>
+            <h2>Завдання №1</h2>
 
-    <h3>Умова</h3>
+            <h3>Умова</h3>
 
-    <p>
-        Зберегти введене значення у змінну value.
-        Вивести це значення у Console.
-        Перевірити: введене значення від'ємне, додатнє чи дорівнює нулю.
-        Відповідь вивести за допомогою alert().
-    </p>
+            <p>
+                Зберегти введене значення у змінну value.
+                Вивести це значення у Console.
+                Перевірити: введене значення від'ємне, додатнє чи дорівнює нулю.
+                Відповідь вивести за допомогою alert().
+            </p>
 
-    <h3>Код</h3>
+            <h3>Код</h3>
 
 
-<pre><code>let value = Number(prompt("Введіть число"));
+            <pre><code>let value = Number(prompt("Введіть число"));
 
 console.log(`Введене число: ${value}`);
 
@@ -83,40 +83,36 @@ if (value > 0) {
     alert("Число дорівнює нулю");
 }</code></pre>
 
-    <button class="run-btn" onclick="runTask1()">
-        Запустити код
-    </button>
+            <button class="run-btn" onclick="runTask1()">
+                Запустити код
+            </button>
 
-    <h3>Скріншот результату виконання</h3>
+            <h3>Скріншот результату виконання</h3>
 
-    <img
-        src="images/lab4/task1.png"
-        alt="Результат завдання 1"
-        class="result-image"
-    >
+            <img src="images/lab4/task1.png" alt="Результат завдання 1" class="result-image">
 
-</section>
+        </section>
 
-<!-- ===================== TASK 2 ===================== -->
+        <!-- ===================== TASK 2 ===================== -->
 
-<section id="task2" class="card">
+        <section id="task2" class="card">
 
-    <h2>Завдання №2</h2>
+            <h2>Завдання №2</h2>
 
-    <h3>Умова</h3>
+            <h3>Умова</h3>
 
-    <p>
-        Змінна number може набувати значень 1, 2, 3 або 4.
-        Якщо значення дорівнює 1 — зима,
-        2 — весна,
-        3 — літо,
-        4 — осінь.
-        Розв'язати через switch-case.
-    </p>
+            <p>
+                Змінна number може набувати значень 1, 2, 3 або 4.
+                Якщо значення дорівнює 1 — зима,
+                2 — весна,
+                3 — літо,
+                4 — осінь.
+                Розв'язати через switch-case.
+            </p>
 
-    <h3>Код</h3>
+            <h3>Код</h3>
 
-<pre><code>let number = prompt("Введіть число від 1 до 4");
+            <pre><code>let number = prompt("Введіть число від 1 до 4");
 
 let result;
 
@@ -139,37 +135,33 @@ switch (number) {
 
 console.log(result);</code></pre>
 
-    <button class="run-btn" onclick="runTask2()">
-        Запустити код
-    </button>
+            <button class="run-btn" onclick="runTask2()">
+                Запустити код
+            </button>
 
-    <h3>Скріншот результату виконання</h3>
+            <h3>Скріншот результату виконання</h3>
 
-    <img
-        src="images/lab4/task2.png"
-        alt="Результат завдання 2"
-        class="result-image"
-    >
+            <img src="images/lab4/task2.png" alt="Результат завдання 2" class="result-image">
 
-</section>
-<!-- ===================== TASK 3 ===================== -->
+        </section>
+        <!-- ===================== TASK 3 ===================== -->
 
-<section id="task3" class="card">
+        <section id="task3" class="card">
 
-    <h2>Завдання №3</h2>
+            <h2>Завдання №3</h2>
 
-    <h3>Умова</h3>
+            <h3>Умова</h3>
 
-    <p>
-        Є користувачі Admin та User з відповідними паролями.
-        Запитати логін користувача через prompt().
-        Якщо логін правильний — запросити пароль.
-        При успішній авторизації вивести привітання.
-    </p>
+            <p>
+                Є користувачі Admin та User з відповідними паролями.
+                Запитати логін користувача через prompt().
+                Якщо логін правильний — запросити пароль.
+                При успішній авторизації вивести привітання.
+            </p>
 
-    <h3>Код</h3>
+            <h3>Код</h3>
 
-<pre><code>const adminPassword = "admin123";
+            <pre><code>const adminPassword = "admin123";
 const userPassword = "user123";
 
 let login = prompt("Введіть логін");
@@ -206,37 +198,33 @@ if (login === "Admin") {
 
 }</code></pre>
 
-    <button class="run-btn" onclick="runTask3()">
-        Запустити код
-    </button>
+            <button class="run-btn" onclick="runTask3()">
+                Запустити код
+            </button>
 
-    <h3>Скріншот результату виконання</h3>
+            <h3>Скріншот результату виконання</h3>
 
-    <img
-        src="images/lab4/task3.png"
-        alt="Результат завдання 3"
-        class="result-image"
-    >
+            <img src="images/lab4/task3.png" alt="Результат завдання 3" class="result-image">
 
-</section>
+        </section>
 
-<!-- ===================== TASK 4 ===================== -->
+        <!-- ===================== TASK 4 ===================== -->
 
-<section id="task4" class="card">
+        <section id="task4" class="card">
 
-    <h2>Завдання №4</h2>
+            <h2>Завдання №4</h2>
 
-    <h3>Умова</h3>
+            <h3>Умова</h3>
 
-    <p>
-        Створити функцію makeTransaction(), яка приймає
-        кількість дроїдів та ціну одного дроїда.
-        Повернути повідомлення про суму замовлення.
-    </p>
+            <p>
+                Створити функцію makeTransaction(), яка приймає
+                кількість дроїдів та ціну одного дроїда.
+                Повернути повідомлення про суму замовлення.
+            </p>
 
-    <h3>Код</h3>
+            <h3>Код</h3>
 
-<pre><code>function makeTransaction(quantity, pricePerDroid) {
+            <pre><code>function makeTransaction(quantity, pricePerDroid) {
 
     const totalPrice = quantity * pricePerDroid;
 
@@ -246,37 +234,33 @@ if (login === "Admin") {
 console.log(makeTransaction(5, 3000));
 console.log(makeTransaction(3, 1500));</code></pre>
 
-    <button class="run-btn" onclick="runTask4()">
-        Запустити код
-    </button>
+            <button class="run-btn" onclick="runTask4()">
+                Запустити код
+            </button>
 
-    <h3>Скріншот результату виконання</h3>
+            <h3>Скріншот результату виконання</h3>
 
-    <img
-        src="images/lab4/task4.png"
-        alt="Результат завдання 4"
-        class="result-image"
-    >
+            <img src="images/lab4/task4.png" alt="Результат завдання 4" class="result-image">
 
-</section>
-<!-- ===================== TASK 5 ===================== -->
+        </section>
+        <!-- ===================== TASK 5 ===================== -->
 
-<section id="task5" class="card">
+        <section id="task5" class="card">
 
-    <h2>Завдання №5</h2>
+            <h2>Завдання №5</h2>
 
-    <h3>Умова</h3>
+            <h3>Умова</h3>
 
-    <p>
-        Функція checkForSpam(message) перевіряє рядок
-        на наявність слів spam або sale незалежно від регістру.
-        Якщо слово знайдено — повертає true,
-        інакше — false.
-    </p>
+            <p>
+                Функція checkForSpam(message) перевіряє рядок
+                на наявність слів spam або sale незалежно від регістру.
+                Якщо слово знайдено — повертає true,
+                інакше — false.
+            </p>
 
-    <h3>Код</h3>
+            <h3>Код</h3>
 
-<pre><code>function checkForSpam(message) {
+            <pre><code>function checkForSpam(message) {
 
     const normalizedMessage = message.toLowerCase();
 
@@ -288,37 +272,33 @@ console.log(checkForSpam("Latest technology news"));
 console.log(checkForSpam("Big SALE today"));
 console.log(checkForSpam("Get best SPAM offers"));</code></pre>
 
-    <button class="run-btn" onclick="runTask5()">
-        Запустити код
-    </button>
+            <button class="run-btn" onclick="runTask5()">
+                Запустити код
+            </button>
 
-    <h3>Скріншот результату виконання</h3>
+            <h3>Скріншот результату виконання</h3>
 
-    <img
-        src="images/lab4/task5.png"
-        alt="Результат завдання 5"
-        class="result-image"
-    >
+            <img src="images/lab4/task5.png" alt="Результат завдання 5" class="result-image">
 
-</section>
+        </section>
 
-<!-- ===================== TASK 6 ===================== -->
+        <!-- ===================== TASK 6 ===================== -->
 
-<section id="task6" class="card">
+        <section id="task6" class="card">
 
-    <h2>Завдання №6</h2>
+            <h2>Завдання №6</h2>
 
-    <h3>Умова</h3>
+            <h3>Умова</h3>
 
-    <p>
-        Написати функцію filterArray(numbers, value),
-        яка повертає новий масив лише з тих елементів,
-        що більші за value.
-    </p>
+            <p>
+                Написати функцію filterArray(numbers, value),
+                яка повертає новий масив лише з тих елементів,
+                що більші за value.
+            </p>
 
-    <h3>Код</h3>
+            <h3>Код</h3>
 
-<pre><code>function filterArray(numbers, value) {
+            <pre><code>function filterArray(numbers, value) {
 
     const result = [];
 
@@ -336,36 +316,32 @@ console.log(checkForSpam("Get best SPAM offers"));</code></pre>
 console.log(filterArray([1, 2, 3, 4, 5], 3));
 console.log(filterArray([12, 24, 8, 41, 76], 20));</code></pre>
 
-    <button class="run-btn" onclick="runTask6()">
-        Запустити код
-    </button>
+            <button class="run-btn" onclick="runTask6()">
+                Запустити код
+            </button>
 
-    <h3>Скріншот результату виконання</h3>
+            <h3>Скріншот результату виконання</h3>
 
-    <img
-        src="images/lab4/task6.png"
-        alt="Результат завдання 6"
-        class="result-image"
-    >
+            <img src="images/lab4/task6.png" alt="Результат завдання 6" class="result-image">
 
-</section>
-<!-- ===================== TASK 7 ===================== -->
+        </section>
+        <!-- ===================== TASK 7 ===================== -->
 
-<section id="task7" class="card">
+        <section id="task7" class="card">
 
-    <h2>Завдання №7 (Варіант 7)</h2>
+            <h2>Завдання №7 (Варіант 7)</h2>
 
-    <h3>Умова 1</h3>
+            <h3>Умова 1</h3>
 
-    <p>
-        Створити одновимірний масив.
-        Знайти найбільший серед від'ємних та найменший серед додатних
-        елементів масиву. Застосувати функції.
-    </p>
+            <p>
+                Створити одновимірний масив.
+                Знайти найбільший серед від'ємних та найменший серед додатних
+                елементів масиву. Застосувати функції.
+            </p>
 
-    <h3>Код</h3>
+            <h3>Код</h3>
 
-<pre><code>function findValues(arr) {
+            <pre><code>function findValues(arr) {
 
     let maxNegative = -Infinity;
     let minPositive = Infinity;
@@ -396,20 +372,20 @@ const result = findValues(arr);
 console.log("Найбільший серед від'ємних:", result.maxNegative);
 console.log("Найменший серед додатних:", result.minPositive);</code></pre>
 
-    <button class="run-btn" onclick="runTask7Part1()">
-        Запустити частину 1
-    </button>
+            <button class="run-btn" onclick="runTask7Part1()">
+                Запустити частину 1
+            </button>
 
-    <h3>Умова 2</h3>
+            <h3>Умова 2</h3>
 
-    <p>
-        Упорядкувати масив у порядку зменшення методом вибору.
-        Надрукувати вхідний та вихідний масив.
-    </p>
+            <p>
+                Упорядкувати масив у порядку зменшення методом вибору.
+                Надрукувати вхідний та вихідний масив.
+            </p>
 
-    <h3>Код</h3>
+            <h3>Код</h3>
 
-<pre><code>function selectionSortDesc(arr) {
+            <pre><code>function selectionSortDesc(arr) {
 
     for (let i = 0; i < arr.length - 1; i++) {
 
@@ -438,38 +414,34 @@ console.log(
     selectionSortDesc([...numbers])
 );</code></pre>
 
-    <button class="run-btn" onclick="runTask7Part2()">
-        Запустити частину 2
-    </button>
+            <button class="run-btn" onclick="runTask7Part2()">
+                Запустити частину 2
+            </button>
 
-    <h3>Скріншот результату виконання</h3>
+            <h3>Скріншот результату виконання</h3>
 
-    <img
-        src="images/lab4/task7.png"
-        alt="Результат завдання 7"
-        class="result-image"
-    >
+            <img src="images/lab4/task7.png" alt="Результат завдання 7" class="result-image">
 
-</section>
+        </section>
 
-<!-- ===================== TASK 8 ===================== -->
+        <!-- ===================== TASK 8 ===================== -->
 
-<section id="task8" class="card">
+        <section id="task8" class="card">
 
-    <h2>Завдання №8</h2>
+            <h2>Завдання №8</h2>
 
-    <h3>Умова</h3>
+            <h3>Умова</h3>
 
-    <p>
-        Створити двовимірний масив додатніх та від'ємних чисел.
-        Сформувати окремо масив додатніх та від'ємних чисел.
-        Замінити третій елемент додатного масиву введеним
-        користувачем від'ємним числом.
-    </p>
+            <p>
+                Створити двовимірний масив додатніх та від'ємних чисел.
+                Сформувати окремо масив додатніх та від'ємних чисел.
+                Замінити третій елемент додатного масиву введеним
+                користувачем від'ємним числом.
+            </p>
 
-    <h3>Код</h3>
+            <h3>Код</h3>
 
-<pre><code>let matrix = [];
+            <pre><code>let matrix = [];
 
 for (let i = 0; i < 4; i++) {
 
@@ -515,153 +487,152 @@ positive[2] = newValue;
 console.log("Оновлений масив додатних:");
 console.log(positive);</code></pre>
 
-    <button class="run-btn" onclick="runTask8()">
-        Запустити код
-    </button>
+            <button class="run-btn" onclick="runTask8()">
+                Запустити код
+            </button>
 
-    <h3>Скріншот результату виконання</h3>
+            <h3>Скріншот результату виконання</h3>
 
-    <img
-        src="images/lab4/task8.png"
-        alt="Результат завдання 8"
-        class="result-image"
-    >
+            <img src="images/lab4/task8.png" alt="Результат завдання 8" class="result-image">
 
-</section>
-<!-- ===================== ВИСНОВКИ ===================== -->
+        </section>
+        <!-- ===================== ВИСНОВКИ ===================== -->
 
-<section id="conclusion" class="card">
+        <section id="conclusion" class="card">
 
-    <h2>Висновки</h2>
+            <h2>Висновки</h2>
 
-    <p>
-        Під час виконання лабораторної роботи було опрацьовано основні
-        конструкції мови JavaScript: змінні, умовні оператори,
-        оператор switch-case, цикли, функції та масиви.
-        Було отримано практичні навички роботи з одновимірними
-        та двовимірними масивами, пошуку елементів, сортування даних
-        та взаємодії з користувачем за допомогою prompt(),
-        alert() і Console.
-    </p>
+            <p>
+                Під час виконання лабораторної роботи було опрацьовано основні
+                конструкції мови JavaScript: змінні, умовні оператори,
+                оператор switch-case, цикли, функції та масиви.
+                Було отримано практичні навички роботи з одновимірними
+                та двовимірними масивами, пошуку елементів, сортування даних
+                та взаємодії з користувачем за допомогою prompt(),
+                alert() і Console.
+            </p>
 
-</section>
+        </section>
 
-</main>
+    </main>
 
-<script>
+    <script>
 
-/* ================= TASK 1 ================= */
+        /* ================= TASK 1 ================= */
 
-function runTask1() {
+        function runTask1() {
 
-    let value = Number(prompt("Введіть число"));
+            let value = Number(prompt("Введіть число"));
 
-    console.clear();
+            console.clear();
 
-    console.log(`Введене число: ${value}`);
+            console.log(`Введене число: ${value}`);
 
-    if (value > 0) {
-        console.log("Число додатнє");
-        alert("Число додатнє");
-    } else if (value < 0) {
-        console.log("Число від'ємне");
-        alert("Число від'ємне");
-    } else {
-        console.log("Число дорівнює нулю");
-        alert("Число дорівнює нулю");
-    }
-}
-
-/* ================= TASK 2 ================= */
-
-function runTask2() {
-
-    let number = prompt("Введіть число від 1 до 4");
-
-    let result;
-
-    switch (number) {
-        case "1":
-            result = "Зима";
-            break;
-        case "2":
-            result = "Весна";
-            break;
-        case "3":
-            result = "Літо";
-            break;
-        case "4":
-            result = "Осінь";
-            break;
-        default:
-            result = "Некоректне значення";
-    }
-
-    console.log(result);
-}
-
-/* ================= TASK 3 ================= */
-
-function runTask3() {
-
-    const adminPassword = "admin123";
-    const userPassword = "user123";
-
-    let login = prompt("Введіть логін");
-
-    console.log(`Логін: ${login}`);
-
-    if (login === "Admin") {
-
-        let password = prompt("Введіть пароль");
-
-        if (password === adminPassword) {
-            alert("Hello, Admin");
-        } else {
-            alert("Невірний пароль");
+            if (value > 0) {
+                console.log("Число додатнє");
+                alert("Число додатнє");
+            } else if (value < 0) {
+                console.log("Число від'ємне");
+                alert("Число від'ємне");
+            } else {
+                console.log("Число дорівнює нулю");
+                alert("Число дорівнює нулю");
+            }
         }
 
-    } else if (login === "User") {
+        /* ================= TASK 2 ================= */
 
-        let password = prompt("Введіть пароль");
+        function runTask2() {
 
-        if (password === userPassword) {
-            alert("Hello, User");
-        } else {
-            alert("Невірний пароль");
+            console.clear();
+
+            let number = prompt("Введіть число від 1 до 4");
+
+            let result;
+
+            switch (number) {
+                case "1":
+                    result = "Зима";
+                    break;
+                case "2":
+                    result = "Весна";
+                    break;
+                case "3":
+                    result = "Літо";
+                    break;
+                case "4":
+                    result = "Осінь";
+                    break;
+                default:
+                    result = "Некоректне значення";
+            }
+
+            console.log(`Введене число: ${number}`);
+            console.log(`Пора року: ${result}`);
+        }
+        /* ================= TASK 3 ================= */
+
+        function runTask3() {
+
+            const adminPassword = "admin123";
+            const userPassword = "user123";
+
+            let login = prompt("Введіть логін");
+
+            console.log(`Логін: ${login}`);
+
+            if (login === "Admin") {
+
+                let password = prompt("Введіть пароль");
+
+                if (password === adminPassword) {
+                    alert("Hello, Admin");
+                } else {
+                    alert("Невірний пароль");
+                }
+
+            } else if (login === "User") {
+
+                let password = prompt("Введіть пароль");
+
+                if (password === userPassword) {
+                    alert("Hello, User");
+                } else {
+                    alert("Невірний пароль");
+                }
+
+            } else if (login === "" || login === null) {
+
+                alert("Cancelled");
+
+            } else {
+
+                alert("I don't know you");
+
+            }
         }
 
-    } else if (login === "" || login === null) {
+        /* ================= TASK 4 ================= */
 
-        alert("Cancelled");
+        function runTask4() {
 
-    } else {
+            function makeTransaction(quantity, pricePerDroid) {
 
-        alert("I don't know you");
+                const totalPrice = quantity * pricePerDroid;
 
-    }
-}
+                return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+            }
 
-/* ================= TASK 4 ================= */
+            console.clear();
 
-function runTask4() {
+            console.log("Кількість дроїдів: 5");
+            console.log("Ціна одного дроїда: 3000");
+            console.log(makeTransaction(5, 3000));
+        }
 
-    function makeTransaction(quantity, pricePerDroid) {
+        /* ================= TASK 5 ================= */
 
-        const totalPrice = quantity * pricePerDroid;
-
-        return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
-    }
-
-    console.clear();
-
-    console.log(makeTransaction(5, 3000));
-    console.log(makeTransaction(3, 1500));
-}
-
-/* ================= TASK 5 ================= */
-
-function runTask5() {
+        function runTask5() {
 
     function checkForSpam(message) {
 
@@ -678,172 +649,174 @@ function runTask5() {
     console.log(checkForSpam("Get best SPAM offers"));
 }
 
-/* ================= TASK 6 ================= */
+        /* ================= TASK 6 ================= */
 
-function runTask6() {
+        function runTask6() {
 
-    function filterArray(numbers, value) {
+            function filterArray(numbers, value) {
 
-        const result = [];
+                const result = [];
 
-        for (let number of numbers) {
+                for (let number of numbers) {
 
-            if (number > value) {
-                result.push(number);
-            }
-        }
-
-        return result;
-    }
-
-    console.clear();
-
-    console.log(filterArray([1, 2, 3, 4, 5], 3));
-    console.log(filterArray([12, 24, 8, 41, 76], 20));
-}
-
-/* ================= TASK 7 PART 1 ================= */
-
-function runTask7Part1() {
-
-    function findValues(arr) {
-
-        let maxNegative = -Infinity;
-        let minPositive = Infinity;
-
-        for (let num of arr) {
-
-            if (num < 0 && num > maxNegative) {
-                maxNegative = num;
-            }
-
-            if (num > 0 && num < minPositive) {
-                minPositive = num;
-            }
-        }
-
-        return {
-            maxNegative,
-            minPositive
-        };
-    }
-
-    const arr = [-8, 12, -3, 7, 2, -15, 9];
-
-    console.clear();
-
-    console.log("Масив:", arr);
-
-    const result = findValues(arr);
-
-    console.log("Найбільший серед від'ємних:", result.maxNegative);
-    console.log("Найменший серед додатних:", result.minPositive);
-}
-
-/* ================= TASK 7 PART 2 ================= */
-
-function runTask7Part2() {
-
-    function selectionSortDesc(arr) {
-
-        for (let i = 0; i < arr.length - 1; i++) {
-
-            let maxIndex = i;
-
-            for (let j = i + 1; j < arr.length; j++) {
-
-                if (arr[j] > arr[maxIndex]) {
-                    maxIndex = j;
+                    if (number > value) {
+                        result.push(number);
+                    }
                 }
+
+                return result;
             }
 
-            [arr[i], arr[maxIndex]] =
-                [arr[maxIndex], arr[i]];
+            console.clear();
+
+            console.log("Початковий масив:", [1, 2, 3, 4, 5]);
+            console.log("Значення для порівняння:", 3);
+            console.log("Результат:", filterArray([1, 2, 3, 4, 5], 3));
         }
 
-        return arr;
-    }
+        /* ================= TASK 7 PART 1 ================= */
 
-    const numbers = [-8, 12, -3, 7, 2, -15, 9];
+        function runTask7Part1() {
 
-    console.clear();
+            function findValues(arr) {
 
-    console.log("Початковий масив:", numbers);
+                let maxNegative = -Infinity;
+                let minPositive = Infinity;
 
-    console.log(
-        "Відсортований масив:",
-        selectionSortDesc([...numbers])
-    );
-}
+                for (let num of arr) {
 
-/* ================= TASK 8 ================= */
+                    if (num < 0 && num > maxNegative) {
+                        maxNegative = num;
+                    }
 
-function runTask8() {
+                    if (num > 0 && num < minPositive) {
+                        minPositive = num;
+                    }
+                }
 
-    let matrix = [];
+                return {
+                    maxNegative,
+                    minPositive
+                };
+            }
 
-    for (let i = 0; i < 4; i++) {
+            const arr = [-8, 12, -3, 7, 2, -15, 9];
 
-        let row = [];
+            console.clear();
 
-        for (let j = 0; j < 4; j++) {
+            console.log("Масив:", arr);
 
-            row.push(
-                Math.floor(Math.random() * 41) - 20
+            const result = findValues(arr);
+
+            console.log("Найбільший серед від'ємних:", result.maxNegative);
+            console.log("Найменший серед додатних:", result.minPositive);
+        }
+
+        /* ================= TASK 7 PART 2 ================= */
+
+        function runTask7Part2() {
+
+            function selectionSortDesc(arr) {
+
+                for (let i = 0; i < arr.length - 1; i++) {
+
+                    let maxIndex = i;
+
+                    for (let j = i + 1; j < arr.length; j++) {
+
+                        if (arr[j] > arr[maxIndex]) {
+                            maxIndex = j;
+                        }
+                    }
+
+                    [arr[i], arr[maxIndex]] =
+                        [arr[maxIndex], arr[i]];
+                }
+
+                return arr;
+            }
+
+            const numbers = [-8, 12, -3, 7, 2, -15, 9];
+
+            console.clear();
+
+            console.log("Початковий масив:", numbers);
+
+            console.log(
+                "Відсортований масив:",
+                selectionSortDesc([...numbers])
             );
         }
 
-        matrix.push(row);
-    }
+        /* ================= TASK 8 ================= */
 
-    console.clear();
+        function runTask8() {
 
-    console.log("Двовимірний масив:");
-    console.table(matrix);
+            let matrix = [];
 
-    let positive = [];
-    let negative = [];
+            for (let i = 0; i < 4; i++) {
 
-    for (let row of matrix) {
+                let row = [];
 
-        for (let item of row) {
+                for (let j = 0; j < 4; j++) {
 
-            if (item >= 0) {
-                positive.push(item);
-            } else {
-                negative.push(item);
+                    row.push(
+                        Math.floor(Math.random() * 41) - 20
+                    );
+                }
+
+                matrix.push(row);
             }
+
+            console.clear();
+
+            console.log("Двовимірний масив:");
+            console.table(matrix);
+
+            let positive = [];
+            let negative = [];
+
+            for (let row of matrix) {
+
+                for (let item of row) {
+
+                    if (item >= 0) {
+                        positive.push(item);
+                    } else {
+                        negative.push(item);
+                    }
+                }
+            }
+
+            console.log("Додатні числа:", positive);
+            console.log("Від'ємні числа:", negative);
+
+            let newValue = Number(
+                prompt("Введіть від'ємне число")
+            );
+
+            positive[2] = newValue;
+
+            console.log("Оновлений масив додатних:");
+            console.log(positive);
         }
-    }
 
-    console.log("Додатні числа:", positive);
-    console.log("Від'ємні числа:", negative);
+    </script>
 
-    let newValue = Number(
-        prompt("Введіть від'ємне число")
-    );
+    <footer class="site-footer">
+        <div class="container">
 
-    positive[2] = newValue;
+            <p>
+                Лабораторна робота №4. JavaScript, масиви та функції.
+            </p>
 
-    console.log("Оновлений масив додатних:");
-    console.log(positive);
-}
+            <p class="note">
+                <a href="index.html">← На головну</a>
+            </p>
 
-</script>
-
-<footer class="site-footer">
-    <div class="container">
-
-        <p>
-            Лабораторна робота №4. JavaScript, масиви та функції.
-        </p>
-
-        <p class="note">
-            <a href="index.html">← На головну</a>
-        </p>
-
-    </div>
-</footer>
+        </div>
+    </footer>
 
 </body>
+
 </html>
