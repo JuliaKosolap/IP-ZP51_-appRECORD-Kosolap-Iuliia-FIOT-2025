@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лабораторна робота №4 — Звіт</title>
 
-```
 <link rel="stylesheet" href="style.css" />
-```
 
 </head>
 
@@ -18,7 +16,6 @@
 <header class="site-header">
     <div class="container">
 
-```
     <h1>Звіт з лабораторної роботи №4</h1>
 
     <p class="subtitle">
@@ -32,13 +29,11 @@
     </nav>
 
 </div>
-```
 
 </header>
 
 <main class="container">
 
-```
 <section id="info" class="card">
 
     <h2>Тема ЛР №4</h2>
@@ -74,7 +69,7 @@
     </p>
 
     <h3>Код</h3>
-```
+
 
 <pre><code>let value = Number(prompt("Введіть число"));
 
@@ -88,9 +83,8 @@ if (value > 0) {
     alert("Число дорівнює нулю");
 }</code></pre>
 
-```
     <button class="run-btn" onclick="runTask1()">
-        ▶ Запустити код
+        Запустити код
     </button>
 
     <h3>Скріншот результату виконання</h3>
@@ -121,7 +115,6 @@ if (value > 0) {
     </p>
 
     <h3>Код</h3>
-```
 
 <pre><code>let number = prompt("Введіть число від 1 до 4");
 
@@ -146,9 +139,8 @@ switch (number) {
 
 console.log(result);</code></pre>
 
-```
     <button class="run-btn" onclick="runTask2()">
-        ▶ Запустити код
+        Запустити код
     </button>
 
     <h3>Скріншот результату виконання</h3>
@@ -160,7 +152,6 @@ console.log(result);</code></pre>
     >
 
 </section>
-```
 <!-- ===================== TASK 3 ===================== -->
 
 <section id="task3" class="card">
@@ -216,7 +207,7 @@ if (login === "Admin") {
 }</code></pre>
 
     <button class="run-btn" onclick="runTask3()">
-        ▶ Запустити код
+        Запустити код
     </button>
 
     <h3>Скріншот результату виконання</h3>
@@ -256,7 +247,7 @@ console.log(makeTransaction(5, 3000));
 console.log(makeTransaction(3, 1500));</code></pre>
 
     <button class="run-btn" onclick="runTask4()">
-        ▶ Запустити код
+        Запустити код
     </button>
 
     <h3>Скріншот результату виконання</h3>
@@ -298,7 +289,7 @@ console.log(checkForSpam("Big SALE today"));
 console.log(checkForSpam("Get best SPAM offers"));</code></pre>
 
     <button class="run-btn" onclick="runTask5()">
-        ▶ Запустити код
+        Запустити код
     </button>
 
     <h3>Скріншот результату виконання</h3>
@@ -346,7 +337,7 @@ console.log(filterArray([1, 2, 3, 4, 5], 3));
 console.log(filterArray([12, 24, 8, 41, 76], 20));</code></pre>
 
     <button class="run-btn" onclick="runTask6()">
-        ▶ Запустити код
+        Запустити код
     </button>
 
     <h3>Скріншот результату виконання</h3>
@@ -406,7 +397,7 @@ console.log("Найбільший серед від'ємних:", result.maxNega
 console.log("Найменший серед додатних:", result.minPositive);</code></pre>
 
     <button class="run-btn" onclick="runTask7Part1()">
-        ▶ Запустити частину 1
+        Запустити частину 1
     </button>
 
     <h3>Умова 2</h3>
@@ -448,7 +439,7 @@ console.log(
 );</code></pre>
 
     <button class="run-btn" onclick="runTask7Part2()">
-        ▶ Запустити частину 2
+        Запустити частину 2
     </button>
 
     <h3>Скріншот результату виконання</h3>
@@ -525,7 +516,7 @@ console.log("Оновлений масив додатних:");
 console.log(positive);</code></pre>
 
     <button class="run-btn" onclick="runTask8()">
-        ▶ Запустити код
+        Запустити код
     </button>
 
     <h3>Скріншот результату виконання</h3>
@@ -565,13 +556,18 @@ function runTask1() {
 
     let value = Number(prompt("Введіть число"));
 
+    console.clear();
+
     console.log(`Введене число: ${value}`);
 
     if (value > 0) {
+        console.log("Число додатнє");
         alert("Число додатнє");
     } else if (value < 0) {
+        console.log("Число від'ємне");
         alert("Число від'ємне");
     } else {
+        console.log("Число дорівнює нулю");
         alert("Число дорівнює нулю");
     }
 }
