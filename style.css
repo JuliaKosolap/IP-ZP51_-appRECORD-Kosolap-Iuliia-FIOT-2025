@@ -53,9 +53,10 @@ hr {
 
 /* ========== HEADER/FOOTER ========== */
 .site-header {
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 22px 0;
+  background: linear-gradient(135deg, #0b65c2, #4a90e2);
+  color: white;
+  padding: 40px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .site-footer {
@@ -67,7 +68,7 @@ hr {
 
 .subtitle {
   margin: 6px 0 0;
-  color: #555;
+  color: rgba(255,255,255,0.9);
 }
 
 /* ========== STUDENT BLOCK ========== */
@@ -84,8 +85,8 @@ hr {
 }
 
 .student-photo {
-  border-radius: 12px;
-  border: 1px solid #ddd;
+  border-radius: 50%;
+  border: 4px solid white;
 }
 
 /* ========== NAVIGATION ========== */
