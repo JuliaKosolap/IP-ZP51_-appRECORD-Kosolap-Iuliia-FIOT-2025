@@ -574,50 +574,50 @@ console.log(positive);</code></pre>
 
         function runTask3() {
 
-    console.clear();
+            console.clear();
 
-    const adminPassword = "admin123";
-    const userPassword = "user123";
+            const adminPassword = "admin123";
+            const userPassword = "user123";
 
-    let login = prompt("Введіть логін");
+            let login = prompt("Введіть логін");
 
-    console.log(`Введений логін: ${login}`);
+            console.log(`Введений логін: ${login}`);
 
-    if (login === "Admin") {
+            if (login === "Admin") {
 
-        let password = prompt("Введіть пароль");
+                let password = prompt("Введіть пароль");
 
-        if (password === adminPassword) {
-            console.log("Результат: успішний вхід як Admin");
-            alert("Hello, Admin");
-        } else {
-            console.log("Результат: невірний пароль");
-            alert("Невірний пароль");
+                if (password === adminPassword) {
+                    console.log("Результат: успішний вхід як Admin");
+                    alert("Hello, Admin");
+                } else {
+                    console.log("Результат: невірний пароль");
+                    alert("Невірний пароль");
+                }
+
+            } else if (login === "User") {
+
+                let password = prompt("Введіть пароль");
+
+                if (password === userPassword) {
+                    console.log("Результат: успішний вхід як User");
+                    alert("Hello, User");
+                } else {
+                    console.log("Результат: невірний пароль");
+                    alert("Невірний пароль");
+                }
+
+            } else if (login === "" || login === null) {
+
+                console.log("Результат: Cancelled");
+                alert("Cancelled");
+
+            } else {
+
+                console.log("Результат: I don't know you");
+                alert("I don't know you");
+            }
         }
-
-    } else if (login === "User") {
-
-        let password = prompt("Введіть пароль");
-
-        if (password === userPassword) {
-            console.log("Результат: успішний вхід як User");
-            alert("Hello, User");
-        } else {
-            console.log("Результат: невірний пароль");
-            alert("Невірний пароль");
-        }
-
-    } else if (login === "" || login === null) {
-
-        console.log("Результат: Cancelled");
-        alert("Cancelled");
-
-    } else {
-
-        console.log("Результат: I don't know you");
-        alert("I don't know you");
-    }
-}
 
         /* ================= TASK 4 ================= */
 
@@ -632,29 +632,51 @@ console.log(positive);</code></pre>
 
             console.clear();
 
-            console.log("Кількість дроїдів: 5");
-            console.log("Ціна одного дроїда: 3000");
-            console.log(makeTransaction(5, 3000));
+            let quantity = Number(
+                prompt("Введіть кількість дроїдів")
+            );
+
+            let pricePerDroid = Number(
+                prompt("Введіть ціну одного дроїда")
+            );
+
+            console.log(`Кількість дроїдів: ${quantity}`);
+            console.log(`Ціна одного дроїда: ${pricePerDroid}`);
+
+            console.log(
+                makeTransaction(quantity, pricePerDroid)
+            );
         }
 
         /* ================= TASK 5 ================= */
 
         function runTask5() {
 
-    function checkForSpam(message) {
+            function checkForSpam(message) {
 
-        const normalizedMessage = message.toLowerCase();
+                const normalizedMessage = message.toLowerCase();
 
-        return normalizedMessage.includes("spam") ||
-            normalizedMessage.includes("sale");
-    }
+                return normalizedMessage.includes("spam") ||
+                    normalizedMessage.includes("sale");
+            }
 
-    console.clear();
+            console.clear();
 
-    console.log(checkForSpam("Latest technology news"));
-    console.log(checkForSpam("Big SALE today"));
-    console.log(checkForSpam("Get best SPAM offers"));
-}
+            let message = prompt(
+                "Введіть повідомлення для перевірки"
+            );
+
+            let result = checkForSpam(message);
+
+            console.log(`Введене повідомлення: ${message}`);
+            console.log(`Містить spam/sale: ${result}`);
+
+            if (result) {
+                alert("У повідомленні знайдено spam або sale");
+            } else {
+                alert("Спам не знайдено");
+            }
+        }
 
         /* ================= TASK 6 ================= */
 
