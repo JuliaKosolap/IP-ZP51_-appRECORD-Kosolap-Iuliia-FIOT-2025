@@ -574,43 +574,50 @@ console.log(positive);</code></pre>
 
         function runTask3() {
 
-            const adminPassword = "admin123";
-            const userPassword = "user123";
+    console.clear();
 
-            let login = prompt("Введіть логін");
+    const adminPassword = "admin123";
+    const userPassword = "user123";
 
-            console.log(`Логін: ${login}`);
+    let login = prompt("Введіть логін");
 
-            if (login === "Admin") {
+    console.log(`Введений логін: ${login}`);
 
-                let password = prompt("Введіть пароль");
+    if (login === "Admin") {
 
-                if (password === adminPassword) {
-                    alert("Hello, Admin");
-                } else {
-                    alert("Невірний пароль");
-                }
+        let password = prompt("Введіть пароль");
 
-            } else if (login === "User") {
-
-                let password = prompt("Введіть пароль");
-
-                if (password === userPassword) {
-                    alert("Hello, User");
-                } else {
-                    alert("Невірний пароль");
-                }
-
-            } else if (login === "" || login === null) {
-
-                alert("Cancelled");
-
-            } else {
-
-                alert("I don't know you");
-
-            }
+        if (password === adminPassword) {
+            console.log("Результат: успішний вхід як Admin");
+            alert("Hello, Admin");
+        } else {
+            console.log("Результат: невірний пароль");
+            alert("Невірний пароль");
         }
+
+    } else if (login === "User") {
+
+        let password = prompt("Введіть пароль");
+
+        if (password === userPassword) {
+            console.log("Результат: успішний вхід як User");
+            alert("Hello, User");
+        } else {
+            console.log("Результат: невірний пароль");
+            alert("Невірний пароль");
+        }
+
+    } else if (login === "" || login === null) {
+
+        console.log("Результат: Cancelled");
+        alert("Cancelled");
+
+    } else {
+
+        console.log("Результат: I don't know you");
+        alert("I don't know you");
+    }
+}
 
         /* ================= TASK 4 ================= */
 
@@ -702,7 +709,6 @@ console.log(positive);</code></pre>
 
             const arr = [-8, 12, -3, 7, 2, -15, 9];
 
-            console.clear();
 
             console.log("Масив:", arr);
 
@@ -737,8 +743,6 @@ console.log(positive);</code></pre>
             }
 
             const numbers = [-8, 12, -3, 7, 2, -15, 9];
-
-            console.clear();
 
             console.log("Початковий масив:", numbers);
 
