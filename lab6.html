@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна робота №6 — Звіт</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+
+            <h1>Звіт з лабораторної роботи №6</h1>
+
+            <p class="subtitle">
+                Прототипи. Класи. DOM. Події.
+                Об'єкт події. Делегування подій.
+            </p>
+
+            <nav class="top-nav">
+                <a class="back-link" href="index.html">← На головну</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section id="info" class="card">
+
+            <h1>Лабораторна робота №6</h1>
+
+            <h2>Тема</h2>
+
+            <p>
+                Прототипи. Класи. Об'єктна модель документа (DOM).
+                Події. Об'єкт події. Делегування подій.
+            </p>
+
+            <h2>Мета</h2>
+
+            <p>
+                Придбати практичні навички роботи з DOM,
+                подіями та делегуванням подій засобами JavaScript.
+            </p>
+            <!-- ===================== TASK 1.1 ===================== -->
+            <section id="task1" class="card">
+
+                <h2>Завдання 1</h2>
+
+                <h3>Умова</h3>
+
+                <p>
+                    Створити поле введення та кнопку SHOW ME.
+                    Після натискання кнопки значення поля
+                    повинно виводитися в консоль.
+                </p>
+
+                <h3>Код</h3>
+
+                <pre><code>&lt;input type="text" id="messageInput"&gt;
+&lt;button onclick="showMessage()"&gt;
+    SHOW ME
+&lt;/button&gt;
+
+function showMessage() {
+    const value =
+        document.getElementById(
+            "messageInput"
+        ).value;
+
+    console.log(
+        "Введене значення:",
+        value
+    );
+}</code></pre>
+
+                <h3>Демонстрація</h3>
+
+                <input type="text" id="messageInput" placeholder="Введіть текст">
+
+                <button class="run-btn" onclick="showMessage()">
+                    SHOW ME
+                </button>
+
+                <h3>Скріншот результату виконання</h3>
+
+                <img src="images/lab6/task1.png" alt="Результат завдання 1" class="result-image">
+
+            </section>
+            <section id="task3" class="card">
+
+                <h2>Завдання 3</h2>
+
+                <h3>Умова</h3>
+
+                <p>
+                    Кнопка «Приховати» ховає текст,
+                    замінюючи його на зірочки.
+                    При повторному натисканні
+                    текст знову стає видимим.
+                </p>
+
+                <h3>Код</h3>
+
+                <pre><code>function togglePassword() {
+
+    const input =
+        document.getElementById(
+            "passwordInput"
+        );
+
+    const button =
+        document.getElementById(
+            "toggleBtn"
+        );
+
+    if (input.type === "password") {
+
+        input.type = "text";
+        button.textContent =
+            "Приховати";
+
+    } else {
+
+        input.type = "password";
+        button.textContent =
+            "Розкрити";
+    }
+}</code></pre>
+
+                <h3>Демонстрація</h3>
+
+                <input type="password" id="passwordInput" value="пароль123">
+
+                <button id="toggleBtn" class="run-btn" onclick="togglePassword()">
+                    Розкрити
+                </button>
+
+                <h3>Скріншот результату виконання</h3>
+
+                <img src="images/lab6/task3.png" alt="Результат завдання 3" class="result-image">
+
+            </section>
+            <section id="task5" class="card">
+
+                <h2>Завдання 5</h2>
+
+                <h3>Умова</h3>
+
+                <p>
+                    Додати слухач кліку на window та
+                    визначити, чи клікнув користувач
+                    у div з id="place".
+                </p>
+
+                <h3>Код</h3>
+
+                <pre><code>window.addEventListener(
+    "click",
+    function(event) {
+
+        const place =
+            document.getElementById(
+                "place"
+            );
+
+        console.log(
+            place.contains(
+                event.target
+            )
+        );
+    }
+);</code></pre>
+
+                <h3 class="taskTitle">
+                    Натисни на зелений блок
+                </h3>
+
+                <div id="place"></div>
+
+                <h3>Скріншот результату виконання</h3>
+
+                <img src="images/lab6/task5.png" alt="Результат завдання 5" class="result-image">
+
+            </section>
+            <section id="task7" class="card">
+
+                <h2>Завдання 7</h2>
+
+                <h3>Умова</h3>
+
+                <p>
+                    Порахувати кількість категорій та
+                    вивести назву кожної категорії
+                    і кількість її елементів.
+                </p>
+
+                <h3>Код</h3>
+
+                <pre><code>const categories =
+    document.querySelectorAll(
+        "#categories .item"
+    );
+
+console.log(
+    "Кількість категорій:",
+    categories.length
+);
+
+categories.forEach(
+    category => {
+
+        const title =
+            category.querySelector(
+                "h2"
+            ).textContent;
+
+        const elements =
+            category.querySelectorAll(
+                "ul li"
+            );
+
+        console.log(
+            title,
+            elements.length
+        );
+    }
+);</code></pre>
+
+                <h3>Демонстрація</h3>
+
+                <ul id="categories">
+
+                    <li class="item">
+                        <h2>Animals</h2>
+                        <ul>
+                            <li>Cat</li>
+                            <li>Hamster</li>
+                            <li>Horse</li>
+                            <li>Parrot</li>
+                        </ul>
+                    </li>
+
+                    <li class="item">
+                        <h2>Products</h2>
+                        <ul>
+                            <li>Bread</li>
+                            <li>Parsley</li>
+                            <li>Cheese</li>
+                        </ul>
+                    </li>
+
+                    <li class="item">
+                        <h2>Technologies</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <button class="run-btn" onclick="runTask7()">
+                    ▶ Запустити код
+                </button>
+
+                <h3>Скріншот результату виконання</h3>
+
+                <img src="images/lab6/task7.png" alt="Результат завдання 7" class="result-image">
+
+            </section>
+            <section id="task8" class="card">
+
+                <h2>Завдання 8</h2>
+
+                <h3>Умова</h3>
+
+                <p>
+                    Створити форму авторизації.
+                    Якщо всі поля заповнені — вивести
+                    об'єкт з даними користувача в консоль.
+                </p>
+
+                <h3>Код</h3>
+
+                <pre><code>const email =
+    form.elements.email.value;
+
+const password =
+    form.elements.password.value;
+
+if (
+    email === "" ||
+    password === ""
+) {
+    alert("Заповніть усі поля");
+    return;
+}
+
+console.log({
+    email,
+    password
+});</code></pre>
+
+                <h3>Демонстрація</h3>
+
+                <form id="loginForm">
+
+                    <label>
+                        Email
+                        <input type="email" name="email">
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        Password
+                        <input type="password" name="password">
+                    </label>
+
+                    <br><br>
+
+                    <button type="submit" class="run-btn">
+                        Login
+                    </button>
+
+                </form>
+
+                <h3>Скріншот результату виконання</h3>
+
+                <img src="images/lab6/task8.png" alt="Результат завдання 8" class="result-image">
+
+            </section>
+            <section id="task9" class="card">
+
+                <h2>Завдання 9</h2>
+
+                <h3>Умова</h3>
+
+                <p>
+                    Змінювати колір фону сторінки на випадковий
+                    при натисканні кнопки.
+                </p>
+
+                <h3>Код</h3>
+
+                <pre><code>function getRandomHexColor() {
+    return "#" +
+        Math.floor(
+            Math.random() * 16777215
+        )
+        .toString(16)
+        .padStart(6, "0");
+}
+
+function changeColor() {
+
+    const color =
+        getRandomHexColor();
+
+    document.body.style.backgroundColor =
+        color;
+
+    document.getElementById(
+        "colorValue"
+    ).textContent = color;
+}</code></pre>
+
+                <h3>Демонстрація</h3>
+
+                <p>
+                    Поточний колір:
+                    <span id="colorValue">
+                        #ffffff
+                    </span>
+                </p>
+
+                <button class="run-btn" onclick="changeColor()">
+                    Change color
+                </button>
+
+                <h3>Скріншот результату виконання</h3>
+
+                <img src="images/lab6/task9.png" alt="Результат завдання 9" class="result-image">
+
+            </section>
+            <section id="task10" class="card">
+
+                <h2>Завдання 10</h2>
+
+                <h3>Умова</h3>
+
+                <p>
+                    Створити набір кольорових блоків.
+                    Кількість блоків задається користувачем.
+                    Кожен наступний блок збільшується на 10px.
+                </p>
+
+                <h3>Код</h3>
+
+                <pre><code>function createBoxes(amount) {
+    // створення блоків
+}
+
+function destroyBoxes() {
+    // видалення блоків
+}</code></pre>
+
+                <h3>Демонстрація</h3>
+
+                <input type="number" id="boxesAmount" min="1" max="100" placeholder="Кількість блоків">
+
+                <button class="run-btn" onclick="createBoxes()">
+                    Create
+                </button>
+
+                <button class="run-btn" onclick="destroyBoxes()">
+                    Destroy
+                </button>
+
+                <div id="boxes" style="margin-top:20px;"></div>
+
+                <h3>Скріншот результату виконання</h3>
+
+                <img src="images/lab6/task10.png" alt="Результат завдання 10" class="result-image">
+
+            </section>
+        </section>
+        <!-- ===================== ВИСНОВКИ ===================== -->
+
+        <section id="conclusion" class="card">
+
+            <h2>Висновки</h2>
+
+            <section id="conclusion" class="card">
+
+                <h2>Висновки</h2>
+
+                <p>
+                    Під час виконання лабораторної роботи
+                    було опрацьовано роботу з DOM-деревом,
+                    подіями браузера та механізмом делегування подій.
+                    Було створено інтерактивні елементи інтерфейсу,
+                    реалізовано обробку подій користувача,
+                    роботу з формами, зміною стилів та динамічним
+                    створенням елементів сторінки.
+                </p>
+
+                <p>
+                    Отримано практичні навички використання
+                    об'єкта події, роботи з DOM-елементами,
+                    делегування подій та створення динамічних
+                    веб-інтерфейсів засобами JavaScript.
+                </p>
+
+            </section>
+        </section>
+    </main>
+
+    <script>
+
+        function showMessage() {
+
+            const value =
+                document.getElementById(
+                    "messageInput"
+                ).value;
+
+            console.log(
+                "Введене значення:",
+                value
+            );
+        }
+        function togglePassword() {
+
+            const input =
+                document.getElementById(
+                    "passwordInput"
+                );
+
+            const button =
+                document.getElementById(
+                    "toggleBtn"
+                );
+
+            if (input.type === "password") {
+
+                input.type = "text";
+                button.textContent =
+                    "Приховати";
+
+                console.log(
+                    "Текст відкрито"
+                );
+
+            } else {
+
+                input.type = "password";
+                button.textContent =
+                    "Розкрити";
+
+                console.log(
+                    "Текст приховано"
+                );
+            }
+        }
+        window.addEventListener(
+            "click",
+            function (event) {
+
+                const place =
+                    document.getElementById(
+                        "place"
+                    );
+
+                console.log(
+                    place.contains(
+                        event.target
+                    )
+                );
+            }
+        );
+        function runTask7() {
+
+            console.clear();
+
+            const categories =
+                document.querySelectorAll(
+                    "#categories .item"
+                );
+
+            console.log(
+                `Кількість категорій: ${categories.length}`
+            );
+
+            categories.forEach(
+                category => {
+
+                    const title =
+                        category.querySelector(
+                            "h2"
+                        ).textContent;
+
+                    const elements =
+                        category.querySelectorAll(
+                            "ul li"
+                        );
+
+                    console.log(
+                        `Категорія: ${title}`
+                    );
+
+                    console.log(
+                        `Кількість елементів: ${elements.length}`
+                    );
+
+                    console.log("----------------");
+                }
+            );
+        }
+        document
+            .getElementById("loginForm")
+            .addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+                    const email =
+                        this.elements.email.value;
+
+                    const password =
+                        this.elements.password.value;
+
+                    if (
+                        email === "" ||
+                        password === ""
+                    ) {
+
+                        alert(
+                            "Заповніть усі поля"
+                        );
+
+                        return;
+                    }
+
+                    const userData = {
+                        email,
+                        password
+                    };
+
+                    console.clear();
+
+                    console.log(
+                        "Дані користувача:"
+                    );
+
+                    console.log(userData);
+
+                    this.reset();
+                }
+            );
+        function getRandomHexColor() {
+
+            return "#" +
+                Math.floor(
+                    Math.random() * 16777215
+                )
+                    .toString(16)
+                    .padStart(6, "0");
+        }
+
+        function changeColor() {
+
+            const color =
+                getRandomHexColor();
+
+            document.body.style.backgroundColor =
+                color;
+
+            document.getElementById(
+                "colorValue"
+            ).textContent = color;
+
+            console.log(
+                "Новий колір:",
+                color
+            );
+        }
+        function getRandomHexColor() {
+
+            return "#" +
+                Math.floor(
+                    Math.random() * 16777215
+                )
+                    .toString(16)
+                    .padStart(6, "0");
+        }
+
+        function createBoxes() {
+
+            const amount = Number(
+                document.getElementById(
+                    "boxesAmount"
+                ).value
+            );
+
+            const boxes =
+                document.getElementById(
+                    "boxes"
+                );
+
+            boxes.innerHTML = "";
+
+            let size = 30;
+
+            for (
+                let i = 0;
+                i < amount;
+                i++
+            ) {
+
+                const box =
+                    document.createElement(
+                        "div"
+                    );
+
+                box.style.width =
+                    `${size}px`;
+
+                box.style.height =
+                    `${size}px`;
+
+                box.style.backgroundColor =
+                    getRandomHexColor();
+
+                box.style.margin =
+                    "5px";
+
+                boxes.appendChild(box);
+
+                size += 10;
+            }
+
+            console.log(
+                `Створено ${amount} блоків`
+            );
+        }
+
+        function destroyBoxes() {
+
+            document.getElementById(
+                "boxes"
+            ).innerHTML = "";
+
+            console.log(
+                "Усі блоки видалено"
+            );
+        }
+    </script>
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <p>
+                Лабораторна робота №5. Об'єкт. Методи об'єкта. Масив об'єктів. Стрілочні функції.
+            </p>
+
+            <p class="note">
+                <a href="index.html">← На головну</a>
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
